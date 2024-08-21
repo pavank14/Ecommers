@@ -9,8 +9,18 @@ document.addEventListener('DOMContentLoaded', () => {
 function showPosition(position) {
     const lat = position.coords.latitude;
     const lon = position.coords.longitude;
-    document.getElementById('location').innerText = `Lat: ${lat}, Lon: ${lon}`;
+
+    fetch(`https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${lat}&longitude=${lon}&localityLanguage=en`)
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('location').innerText = `City: ${data.city}`;
+        })
+        .catch(error => {
+            document.getElementById('location').innerText = "Unable to fetch location.";
+            console.error('Error:', error);
+        });
 }
+
 
 document.addEventListener('DOMContentLoaded', () => {
     // Increase quantity
