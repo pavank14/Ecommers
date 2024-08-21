@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vegetables - Quick Grocery Store</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">QuickGrocery</div>
+        <div class="location" id="location">Fetching location...</div>
+        <input type="text" class="search" placeholder="Search...">
+        <button class="login">Login</button>
+        <a href="cart.html" class="cart">Cart</a>
+    </header>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const products = document.querySelectorAll('.product');
+
+            products.forEach(product => {
+                const quantityDisplay = product.querySelector('.quantity-display');
+                const incrementButton = product.querySelector('.increment');
+                const decrementButton = product.querySelector('.decrement');
+                const addToCartButton = product.querySelector('.add-to-cart');
+
+                let quantity = 0;
+                const price = parseFloat(product.querySelector('.product-info span:last-child').textContent.replace('₹', '').replace(' per kg', '')); // Price per kg
+                const maxQuantity = 6;
+                const minQuantity = 0;
+
+                incrementButton.addEventListener('click', () => {
+                    if (quantity < maxQuantity) {
+                        quantity++;
+                        quantityDisplay.textContent = quantity;
+                    }
+                });
+
+                decrementButton.addEventListener('click', () => {
+                    if (quantity > minQuantity) {
+                        quantity--;
+                        quantityDisplay.textContent = quantity;
+                    }
+                });
+
+                addToCartButton.addEventListener('click', () => {
+                    const total = quantity * price;
+                    
+                    updateCart(product.querySelector('.product-info span:first-child').textContent, quantity, total);
+                });
+
+                function updateCart(itemName, quantity, total) {
+                    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+                    cart.push({ itemName, quantity, total });
+                    localStorage.setItem('cart', JSON.stringify(cart));
+                }
+            });
+        });
+    </script>
+    <main>
+        <div class="sidebar">
+            <div class="category">
+                <h2>Categories</h2>
+                <ul>
+                    <li><a href="#fresh-vegetables">Fresh Vegetables</a></li>
+                    <li><a href="#fresh-fruits">Fresh Fruits</a></li>
+                    <li><a href="#mangoes-melons">Mangoes & Melons</a></li>
+                    <li><a href="#seasonal">Seasonal</a></li>
+                    <li><a href="#exotics">Exotics</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+            <section id="fresh-vegetables">
+                <h2>Fresh Vegetables</h2>
+                <div class="subcategory">
+                    <div class="product">
+                        <img src="Src/vegitable/fresh/potato.png" alt="Potato">
+                        <div class="product-info">
+                            <span>Potato</span>
+                            <span>₹30.00 per kg</span>
+                        </div>
+                        <div class="quantity-controls">
+                            <button class="decrement">-</button>
+                            <span class="quantity-display">0</span>
+                            <button class="increment">+</button>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="product">
+                        <img src="Src/vegitable/fresh/onion.png" alt="Onion">
+                        <div class="product-info">
+                            <span>Onion</span>
+                            <span>₹25.00 per kg</span>
+                        </div>
+                        <div class="quantity-controls">
+                            <button class="decrement">-</button>
+                            <span class="quantity-display">0</span>
+                            <button class="increment">+</button>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="product">
+                        <img src="Src/vegitable/fresh/tomoto.png" alt="Tomato">
+                        <div class="product-info">
+                            <span>Tomato</span>
+                            <span>₹20.00 per kg</span>
+                        </div>
+                        <div class="quantity-controls">
+                            <button class="decrement">-</button>
+                            <span class="quantity-display">0</span>
+                            <button class="increment">+</button>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="product">
+                        <img src="Src/vegitable/fresh/cauliflower.png" alt="Cauliflower">
+                        <div class="product-info">
+                            <span>Cauliflower</span>
+                            <span>₹35.00 per kg</span>
+                        </div>
+                        <div class="quantity-controls">
+                            <button class="decrement">-</button>
+                            <span class="quantity-display">0</span>
+                            <button class="increment">+</button>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="product">
+                        <img src="Src/vegitable/fresh/cabage.png" alt="Cabbage">
+                        <div class="product-info">
+                            <span>Cabbage</span>
+                            <span>₹30.00 per kg</span>
+                        </div>
+                        <div class="quantity-controls">
+                            <button class="decrement">-</button>
+                            <span class="quantity-display">0</span>
+                            <button class="increment">+</button>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="product">
+                        <img src="Src/vegitable/fresh/bean.png" alt="Beans">
+                        <div class="product-info">
+                            <span>Beans</span>
+                            <span>₹40.00 per kg</span>
+                        </div>
+                        <div class="quantity-controls">
+                            <button class="decrement">-</button>
+                            <span class="quantity-display">0</span>
+                            <button class="increment">+</button>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="product">
+                        <img src="Src/vegitable/fresh/Cucumber.png" alt="Cucumber">
+                        <div class="product-info">
+                            <span>Cucumber</span>
+                            <span>₹25.00 per kg</span>
+                        </div>
+                        <div class="quantity-controls">
+                            <button class="decrement">-</button>
+                            <span class="quantity-display">0</span>
+                            <button class="increment">+</button>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                    
+                    <div class="product">
+                        <img src="Src/vegitable/fresh/Peas.png" alt="Frozen Peas">
+                        <div class="product-info">
+                            <span>Frozen Peas</span>
+                            <span>₹60.00 per kg</span>
+                        </div>
+                        <div class="quantity-controls">
+                            <button class="decrement">-</button>
+                            <span class="quantity-display">0</span>
+                            <button class="increment">+</button>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                    
+                </div>
+            </section>
+            <section id="fresh-fruits">
+                <h2>Fresh Fruits</h2>
+                <div class="subcategory">
+                    <div class="product">
+                        <img src="Src/vegitable/fruits/mango.png" alt="Mangoes">
+                        <div class="product-info">
+                            <span>Mangoes</span>
+                            <span>₹80.00 per kg</span>   
+                        </div>
+                        
+                        <div class="quantity-controls">
+                            <button class="decrement">-</button>
+                            <span class="quantity-display">0</span>
+                            <button class="increment">+</button>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                    
+                    <div class="product">
+                        <img src="Src/vegitable/fruits/Grapes.png" alt="Grapes">
+                        <div class="product-info">
+                            <span>Grapes</span>
+                            <span>₹120.00 per kg</span>
+                        </div>
+                        <div class="quantity-controls">
+                            <button class="decrement">-</button>
+                            <span class="quantity-display">0</span>
+                            <button class="increment">+</button>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="product">
+                        <img src="Src/vegitable/fruits/Apples.png" alt="Apples">
+                        <div class="product-info">
+                            <span>Apples</span>
+                            <span>₹150.00 per kg</span>
+                        </div>
+                        <div class="quantity-controls">
+                            <button class="decrement">-</button>
+                            <span class="quantity-display">0</span>
+                            <button class="increment">+</button>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                    
+                    <div class="product">
+                        <img src="Src/vegitable/fruits/Oranges.png" alt="Oranges">
+                        <div class="product-info">
+                            <span>Oranges</span>
+                            <span>₹90.00 per kg</span>
+                        </div>
+                        <div class="quantity-controls">
+                            <button class="decrement">-</button>
+                            <span class="quantity-display">0</span>
+                            <button class="increment">+</button>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                    
+            </section>
+            <section id="mangoes-melons">
+                <h2>Mangoes & Melons</h2>
+                <div class="subcategory">
+                    <div class="product">
+                        <img src="Src/vegitable/Mango/alpson.png" alt="Alphonso">
+                        <div class="product-info">
+                            <span>Alphonso</span>
+                            <span>₹200.00 per kg</span>
+                            
+                        </div>'
+                        <div class="quantity-controls">
+                            <button class="decrement">-</button>
+                            <span class="quantity-display">0</span>
+                            <button class="increment">+</button>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>'
+                    </div>
+                    <div class="product">
+                        <img src="Src/vegitable/Mango/kesar.png" alt="Devgad Kesar">
+                        <div class="product-info">
+                            <span>Devgad Kesar</span>
+                            <span>₹250.00 per kg</span>
+                        </div>
+                        <div class="quantity-controls">
+                            <button class="decrement">-</button>
+                            <span class="quantity-display">0</span>
+                            <button class="increment">+</button>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                    
+                </section>
+                    <section id="Seasonal">
+                            <h2>Seasonal</h2>
+                            <div class="subcategory">
+                                <p style="color: brown;">No vegetables found</p>
+                            </div>
+                            
+                        </section>
+                    
+                        <section id="Exotics">
+                            <h2 >Exotics</h2>
+                            <div class="subcategory">
+                                <p style="color: brown;">No vegetables found</p>
+                       </div>
+                        </section>
+                        
+                           

@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Grocery Store</title>
+</head>
+<body>
+    <header>
+        <div class="logo">QuickGrocery</div>
+        <div class="location" id="location">Fetching location...</div>
+        <input type="text" class="search" placeholder="Search...">
+        <a href="login.html" class="login">Login</a>
+        <a href="cart.html" class="cart">Cart</a>
+    </header>
+    <main>
+       <main>
+    <section>
+        <div class="sections">
+           
+            <figure class="section">
+                <a href="vegetables.html">
+                    <img src="Src/vegitable.png" alt="Vegetables">
+                    <figcaption class="section-name">Vegetables</figcaption>
+                </a>
+            </figure>
+            <figure class="section">
+                <a href="dairy.html">
+                    <img src="Src/dairy.png" alt="Dairy">
+                    <figcaption class="section-name">Dairy</figcaption>
+                </a>
+            </figure>
+            <figure class="section">
+                <a href="colddrinks.html">
+                    <img src="Src/cols.png" alt="Cold Drinks">
+                    <figcaption class="section-name">Cold Drinks</figcaption>
+                </a>
+            </figure>
+            <figure class="section">
+                <a href="snacks.html">
+                    <img src="Src/snacs.png" alt="Snacks">
+                    <figcaption class="section-name">Snacks</figcaption>
+                </a>
+            </figure>
+            <figure class="section">
+                <a href="sweets.html">
+                    <img src="Src/sweet.png" alt="Sweets">
+                    <figcaption class="section-name">Sweets</figcaption>
+                </a>
+            </figure>
+            <figure class="section">
+                <a href="pancorner.html">
+                    <img src="Src/paan.png" alt="pancorner">
+                    <figcaption class="section-name">pancorner</figcaption>
+                </a>
+            </figure>
+            <figure class="section">
+                <a href=" Instant & Frozen Food.html">
+                    <img src="Src/Instant & Frozen Food.png" alt=" Instant & Frozen Food e">
+                    <figcaption class="section-name"> Instant & Frozen Food </figcaption>
+                </a>
+            </figure>
+            <figure class="section">
+                <a href=" Atta, Rice & Dal.html">
+                    <img src="Src/Atta.png" alt=" Atta, Rice & Dal">
+                    <figcaption class="section-name"> Atta, Rice & Dal</figcaption>
+                </a>
+            </figure>
+            <figure class="section">
+                <a href="Dry Fruits, Masala & Oil.html">
+                    <img src="Src/Dry Fruits, Masala & Oil.png" alt="Dry Fruits, Masala & Oil">
+                    <figcaption class="section-name">Dry Fruits, Masala & Oil</figcaption>
+                </a>
+            </figure>
+            <figure class="section">
+                <a href="Home & Office.html">
+                    <img src="Src/Home.png" alt="Home & Office">
+                    <figcaption class="section-name">Home & Office</figcaption>
+                </a>
+            </figure>
+            <figure class="section">
+                <a href=" Pharma & Wellness ">
+                    <img src="Src/pharma.png" alt=" Pharma & Wellness ">
+                    <figcaption class="section-name"> Pharma & Wellness </figcaption>
+                </a>
+            </figure>
+            <figure class="section">
+                <a href="Cleaning Essentials.html">
+                    <img src="Src/Cleaning Essentials.png" alt="Cleaning Essentials">
+                    <figcaption class="section-name">Cleaning Essentials</figcaption>
+                </a>
+            </figure>
+            <figure class="section">
+                <a href="Baby Care.html">
+                    <img src="Src/Baby Care.png" alt="Baby Care">
+                    <figcaption class="section-name">Baby Care</figcaption>
+                </a>
+            </figure>
+            <figure class="section">
+                <a href="Personal Care.html">
+                    <img src="Src/Personal Care.png" alt="Personal Care">
+                    <figcaption class="section-name">Personal Care</figcaption>
+                </a>
+            </figure>
+            <figure class="section">
+                <a href="Bakery & Biscuits.html">
+                    <img src="Src/Bakery & Biscuits.png" alt="Bakery & Biscuits">
+                    <figcaption class="section-name">Bakery & Biscuits</figcaption>
+                </a>
+            </figure>
+            <figure class="section">
+                <a href="Sauces & Spreads.html">
+                    <img src="Src/Sauces & Spreads.png" alt="Sauces & Spreads">
+                    <figcaption class="section-name">Sauces & Spreads</figcaption>
+                </a>
+            </figure>
+            </div>
+       
+    </section>
+<section>
+        <!-- Discover More Section -->
+        <div class="discover-more">
+            <h2>Discover More</h2>
+            <div class="products" id="products"></div>
+            <div class="content">
+                <section id="fresh-vegetables">
+                    <h2>Fresh Vegetables</h2>
+                    <div class="product-container">
+                        <button class="nav-arrow left-arrow">&larr;</button>
+                        <div class="product-wrapper">
+                            <div class="product">
+                                <img src="Src/vegitable/fresh/potato.png" alt="Potato">
+                                <div class="product-info">
+                                    <span>Potato</span>
+                                    <span>₹30.00 per kg</span>
+                                </div>
+                                <div class="quantity-controls">
+                                    <button class="decrement">-</button>
+                                    <span class="quantity-display">0</span>
+                                    <button class="increment">+</button>
+                                </div>
+                                <button class="add-to-cart">Add to Cart</button>
+                            </div>
+                            <div class="product">
+                                <img src="Src/vegitable/fresh/onion.png" alt="Onion">
+                                <div class="product-info">
+                                    <span>Onion</span>
+                                    <span>₹25.00 per kg</span>
+                                </div>
+                                <div class="quantity-controls">
+                                    <button class="decrement">-</button>
+                                    <span class="quantity-display">0</span>
+                                    <button class="increment">+</button>
+                                </div>
+                                <button class="add-to-cart">Add to Cart</button>
+                            </div>
+                            <div class="product">
+                                <img src="Src/vegitable/fresh/tomoto.png" alt="Tomato">
+                                <div class="product-info">
+                                    <span>Tomato</span>
+                                    <span>₹20.00 per kg</span>
+                                </div>
+                                <div class="quantity-controls">
+                                    <button class="decrement">-</button>
+                                    <span class="quantity-display">0</span>
+                                    <button class="increment">+</button>
+                                </div>
+                                <button class="add-to-cart">Add to Cart</button>
+                            </div>
+                            <div class="product">
+                                <img src="Src/vegitable/fresh/cauliflower.png" alt="Cauliflower">
+                                <div class="product-info">
+                                    <span>Cauliflower</span>
+                                    <span>₹35.00 </span>
+                                </div>
+                                <div class="quantity-controls">
+                                    <button class="decrement">-</button>
+                                    <span class="quantity-display">0</span>
+                                    <button class="increment">+</button>
+                                </div>
+                                <button class="add-to-cart">Add to Cart</button>
+                            </div>
+                            <div class="product">
+                                <img src="Src/vegitable/fresh/cabage.png" alt="Cabbage">
+                                <div class="product-info">
+                                    <span>Cabbage</span>
+                                    <span>₹30.00 per kg</span>
+                                </div>
+                                <div class="quantity-controls">
+                                    <button class="decrement">-</button>
+                                    <span class="quantity-display">0</span>
+                                    <button class="increment">+</button>
+                                </div>
+                                <button class="add-to-cart">Add to Cart</button>
+                            </div>
+                            <div class="product">
+                                <img src="Src/vegitable/fresh/bean.png" alt="Beans">
+                                <div class="product-info">
+                                    <span>Beans</span>
+                                    <span>₹40.00 per kg</span>
+                                </div>
+                                <div class="quantity-controls">
+                                    <button class="decrement">-</button>
+                                    <span class="quantity-display">0</span>
+                                    <button class="increment">+</button>
+                                </div>
+                                <button class="add-to-cart">Add to Cart</button>
+                            </div>
+                            <div class="product">
+                                <img src="Src/vegitable/fresh/Cucumber.png" alt="Cucumber">
+                                <div class="product-info">
+                                    <span>Cucumber</span>
+                                    <span>₹25.00 </span>
+                                </div>
+                                <div class="quantity-controls">
+                                    <button class="decrement">-</button>
+                                    <span class="quantity-display">0</span>
+                                    <button class="increment">+</button>
+                                </div>
+                                <button class="add-to-cart">Add to Cart</button>
+                            </div>
+                            <div class="product">
+                                <img src="Src/vegitable/fresh/Peas.png" alt="Frozen Peas">
+                                <div class="product-info">
+                                    <span> Peas</span>
+                                    <span>₹60.00 per kg</span>
+                                </div>
+                                <div class="quantity-controls">
+                                    <button class="decrement">-</button>
+                                    <span class="quantity-display">0</span>
+                                    <button class="increment">+</button>
+                                </div>
+                                <button class="add-to-cart">Add to Cart</button>
+                            </div>
+                        </div>
+                        <button class="nav-arrow right-arrow">&rarr;</button>
+                    </div>
+                </section>
+                
+                <section id="fresh-fruits">
+                    <h2>Fresh Fruits</h2>
+                    <div class="subcategory">
+                        <div class="product">
+                            <img src="Src/vegitable/fruits/mango.png" alt="Mangoes">
+                            <div class="product-info">
+                                <span>Mangoes</span>
+                                <span>₹80.00 per kg</span>   
+                            </div>
+                            
+                            <div class="quantity-controls">
+                                <button class="decrement">-</button>
+                                <span class="quantity-display">0</span>
+                                <button class="increment">+</button>
+                            </div>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                        
+                        <div class="product">
+                            <img src="Src/vegitable/fruits/Grapes.png" alt="Grapes">
+                            <div class="product-info">
+                                <span>Grapes</span>
+                                <span>₹120.00 per kg</span>
+                            </div>
+                            <div class="quantity-controls">
+                                <button class="decrement">-</button>
+                                <span class="quantity-display">0</span>
+                                <button class="increment">+</button>
+                            </div>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                        <div class="product">
+                            <img src="Src/vegitable/fruits/Apples.png" alt="Apples">
+                            <div class="product-info">
+                                <span>Apples</span>
+                                <span>₹150.00 per kg</span>
+                            </div>
+                            <div class="quantity-controls">
+                                <button class="decrement">-</button>
+                                <span class="quantity-display">0</span>
+                                <button class="increment">+</button>
+                            </div>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                        
+                        <div class="product">
+                            <img src="Src/vegitable/fruits/Oranges.png" alt="Oranges">
+                            <div class="product-info">
+                                <span>Oranges</span>
+                                <span>₹90.00 per kg</span>
+                            </div>
+                            <div class="quantity-controls">
+                                <button class="decrement">-</button>
+                                <span class="quantity-display">0</span>
+                                <button class="increment">+</button>
+                            </div>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                        
+                </section>
+                <section id="mangoes-melons">
+                    <h2>Mangoes & Melons</h2>
+                    <div class="subcategory">
+                        <div class="product">
+                            <img src="Src/vegitable/Mango/alpson.png" alt="Alphonso">
+                            <div class="product-info">
+                                <span>Alphonso</span>
+                                <span>₹200 per kg</span>
+                                
+                            </div>
+                            <div class="quantity-controls">
+                                <button class="decrement">-</button>
+                                <span class="quantity-display">0</span>
+                                <button class="increment">+</button>
+                            </div>
+                            <button class="add-to-cart">Add to Cart</button>'
+                        </div>
+                        <div class="product">
+                            <img src="Src/vegitable/Mango/kesar.png" alt="Devgad Kesar">
+                            <div class="product-info">
+                                <span>Kesar</span>
+                                <span>₹250.00 per kg</span>
+                            </div>
+                            <div class="quantity-controls">
+                                <button class="decrement">-</button>
+                                <span class="quantity-display">0</span>
+                                <button class="increment">+</button>
+                            </div>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                        </div></section>
+                        <div class="content">
+                            <section id="milk-products">
+                                <h2>Milk & Products</h2>
+                                <div class="subcategory">
+                                    <div class="product">
+                                        <img src="Src/milk/milk/gokul.png" alt="Gokul Milk">
+                                        <div class="product-info">
+                                            <span>Gokul Milk</span>
+                                            <span>₹40.00 </span>
+                                        </div>
+                                        <div class="quantity-controls">
+                                            <button class="decrement">-</button>
+                                            <span class="quantity-display">1</span>
+                                            <button class="increment">+</button>
+                                        </div>
+                                        <button class="add-to-cart">Add to Cart</button>
+                                    </div>
+                                    <div class="product">
+                                        <img src="Src/milk/milk/amul.png" alt="Amul Masti">
+                                        <div class="product-info">
+                                            <span>Amul Masti</span>
+                                            <span>₹30.00 </span>
+                                        </div>
+                                        <div class="quantity-controls">
+                                            <button class="decrement">-</button>
+                                            <span class="quantity-display">1</span>
+                                            <button class="increment">+</button>
+                                        </div>
+                                        <button class="add-to-cart">Add to Cart</button>
+                                    </div>
+                                    <div class="product">
+                                        <img src="Src/milk/milk/curd.png" alt="Amul Curd">
+                                        <div class="product-info">
+                                            <span>Amul Curd</span>
+                                            <span>₹25.00 </span>
+                                        </div>
+                                        <div class="quantity-controls">
+                                            <button class="decrement">-</button>
+                                            <span class="quantity-display">1</span>
+                                            <button class="increment">+</button>
+                                        </div>
+                                        <button class="add-to-cart">Add to Cart</button>
+                                    </div>
+                                    <div class="product">
+                                        <img src="Src/milk/milk/butter.png" alt="Butter">
+                                        <div class="product-info">
+                                            <span>Butter</span>
+                                            <span>₹50.00 per pack</span>
+                                        </div>
+                                        <div class="quantity-controls">
+                                            <button class="decrement">-</button>
+                                            <span class="quantity-display">1</span>
+                                            <button class="increment">+</button>
+                                        </div>
+                                        <button class="add-to-cart">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </section>
+                            <section id="bread">
+                                <h2>Bread</h2>
+                                <div class="subcategory">
+                                    <div class="product">
+                                        <img src="Src/milk/bread/whitebread.png" alt="White Bread">
+                                        <div class="product-info">
+                                            <span>White Bread</span>
+                                            <span>₹20.00 per pack</span>
+                                        </div>
+                                        <div class="quantity-controls">
+                                            <button class="decrement">-</button>
+                                            <span class="quantity-display">1</span>
+                                            <button class="increment">+</button>
+                                        </div>
+                                        <button class="add-to-cart">Add to Cart</button>
+                                    </div>
+                                    <div class="product">
+                                        <img src="Src/milk/bread/brown.png" alt="Brown Bread">
+                                        <div class="product-info">
+                                            <span>Brown Bread</span>
+                                            <span>₹25.00 per pack</span>
+                                        </div>
+                                        <div class="quantity-controls">
+                                            <button class="decrement">-</button>
+                                            <span class="quantity-display">1</span>
+                                            <button class="increment">+</button>
+                                        </div>
+                                        <button class="add-to-cart">Add to Cart</button>
+                                    </div>
+                                </div>
+                            </section>
+                            
+        </div>
+    </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+<style>
+/* ... existing styles ... */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    background-color: #4CAF50;
+    padding: 10px;
+    color: white;
+}
+
+.logo {
+    flex: 1;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.location {
+    flex: 2;
+    text-align: center;
+}
+
+.search {
+    flex: 3;
+    padding: 5px;
+}
+
+.login, .cart {
+    padding: 10px 20px;
+    background-color: white;
+    color: #4CAF50;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+main {
+    padding: 20px;
+}
+
+.sections {
+   
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 9px;
+    margin-left: -59px;
+}
+
+        .section {
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            text-align: center;
+            width: 90%;
+        }
+
+        section img {
+    width: 60%;
+    height: 159px;
+    object-fit: contain;
+}
+        .section-name {
+            padding: 10px;
+            background-color: #f2f2f2;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .section a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+.discover-more {
+    padding: 20px;
+    background-color: #f4f4f4;
+    margin-left: 59px;
+    margin-left: -16px;
+    width: 99%;
+}
+
+.scroll-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.product-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.product-wrapper {
+    display: flex;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    width: 100%; /* Adjust this to fit your design */
+}
+
+.product {
+    flex: 0 0 200px; /* Adjust the width of each product */
+    margin-right: 10px;
+}
+
+.nav-arrow {
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 24px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.left-arrow {
+    left: 10px;
+}
+
+.right-arrow {
+    right: 10px;
+}
+
+.nav-arrow:hover {
+    background-color: #45a049;
+}
+
+.subcategory {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    width: 100%;
+}
+
+.product {
+    flex: 0 0 auto;
+    width: 200px;
+    margin-right: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.product img {
+    
+    width: 55%;
+    height: 121px;
+}
+
+
+.product-info {
+    padding: 10px;
+    background-color: #f2f2f2;
+    font-weight: bold;
+    color: #333;
+}
+
+.quantity-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+.quantity-controls button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.quantity-display {
+    margin: 0 10px;
+}
+
+.add-to-cart {
+    margin-top: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.scroll-button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.left-button {
+    left: 0;
+}
+
+.right-button {
+    right: 0;
+}
+</style>
+<script>
+   const leftArrow = document.querySelector('.left-arrow');
+const rightArrow = document.querySelector('.right-arrow');
+const productWrapper = document.querySelector('.product-wrapper');
+
+leftArrow.addEventListener('click', () => {
+    productWrapper.scrollBy({
+        left: -200, // Adjust this value based on the width of each product
+        behavior: 'smooth'
+    });
+});
+
+rightArrow.addEventListener('click', () => {
+    productWrapper.scrollBy({
+        left: 200, // Adjust this value based on the width of each product
+        behavior: 'smooth'
+    });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+            const products = document.querySelectorAll('.product');
+
+            products.forEach(product => {
+                const quantityDisplay = product.querySelector('.quantity-display');
+                const incrementButton = product.querySelector('.increment');
+                const decrementButton = product.querySelector('.decrement');
+                const addToCartButton = product.querySelector('.add-to-cart');
+
+                let quantity = 0;
+                const price = parseFloat(product.querySelector('.product-info span:last-child').textContent.replace('₹', '').replace(' per kg', '')); // Price per kg
+                const maxQuantity = 6;
+                const minQuantity = 0;
+
+                incrementButton.addEventListener('click', () => {
+                    if (quantity < maxQuantity) {
+                        quantity++;
+                        quantityDisplay.textContent = quantity;
+                    }
+                });
+
+                decrementButton.addEventListener('click', () => {
+                    if (quantity > minQuantity) {
+                        quantity--;
+                        quantityDisplay.textContent = quantity;
+                    }
+                });
+
+                addToCartButton.addEventListener('click', () => {
+                    const total = quantity * price;
+                   
+                    updateCart(product.querySelector('.product-info span:first-child').textContent, quantity, total);
+                });
+
+                function updateCart(itemName, quantity, total) {
+                    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+                    cart.push({ itemName, quantity, total });
+                    localStorage.setItem('cart', JSON.stringify(cart));
+                }
+            });
+        });
+
+</script>
+</html>
